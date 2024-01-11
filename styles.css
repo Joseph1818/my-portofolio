@@ -246,6 +246,9 @@ section {
   justify-content: center;
   flex-direction: column;
 }
+.text-justify {
+  text-align: justify;
+}
 
 .about-containers,
 .about-details-container {
@@ -274,7 +277,7 @@ section {
   width: 400px;
   margin: auto 0;
 }
-/* Experience Secrion */
+/* Experience Section */
 #experience {
   position: relative;
 }
@@ -370,5 +373,5 @@ footer {
   margin: 0 1rem;
 }
 footer p {
-  text-align: center ;
+  text-align: center;
 }
