@@ -202,13 +202,12 @@ section {
   border-radius: 2rem;
 }
 
-.btn-color-1,
 .btn-color-1 {
   border: rgb(255, 189, 57) 0.1rem solid;
 }
 
 .btn-color-1:hover,
-.btn-color-1:hover {
+.btn-color-2:hover {
   cursor: pointer;
 }
 .btn-color-1,
@@ -222,7 +221,7 @@ section {
 
 .btn-color-2 {
   color: black;
-  border-color: rgb(163, 163, 163);
+  background: rgb(255, 255, 255);
 }
 .btn-color-2:hover {
   border: rgb(255, 255, 255) 0.1rem solid;
