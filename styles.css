@@ -274,6 +274,7 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  font-weight: 500;
 }
 .section-container {
   gap: 4rem;
