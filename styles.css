@@ -335,8 +335,14 @@ article {
 }
 .project-img {
   border-radius: 2rem;
-  width: 90%;
+  width: 60%;
   height: 50%;
+}
+
+@media (max-width: 600px) {
+  .project-img {
+    width: 100%;
+  }
 }
 .project-title {
   margin: 1rem;
@@ -346,6 +352,7 @@ article {
   color: black;
   border-color: rgb(163, 163, 163);
 }
+
 /* Contact */
 
 #contact {
