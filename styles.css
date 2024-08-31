@@ -241,7 +241,7 @@ section {
 }
 
 .about-pic {
-  border-radius: 10%;
+  border-radius: 2rem;
 }
 
 /* About section  */
@@ -279,7 +279,6 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
-  font-weight: 500;
 }
 .section-container {
   gap: 4rem;
@@ -291,6 +290,7 @@ section {
   margin: auto 0;
 }
 /* Experience Section */
+
 #experience {
   position: relative;
 }
@@ -301,11 +301,13 @@ section {
   font-size: 1.75rem;
   margin-bottom: 2rem;
 }
+
 .experience-details-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
+
 .article-container {
   display: flex;
   text-align: initial;
@@ -314,13 +316,15 @@ section {
   gap: 2.5rem;
   justify-content: space-around;
 }
+
 article {
   display: flex;
   width: 10rem;
   justify-content: space-around;
   gap: 0.5rem;
 }
-#article .icon {
+
+article .icon {
   cursor: default;
 }
 

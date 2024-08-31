@@ -8,7 +8,7 @@ function toggleMenu() {
 document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll(".about-pic");
   for (let i = 1; i < slides.length; i++) {
-    slides[i].style.display = "none"; // Hide all images except the first one
+    slides[i].style.display = "none"; 
   }
 
   let currentSlide = 0;
