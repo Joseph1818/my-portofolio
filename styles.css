@@ -327,7 +327,9 @@ article {
 article .icon {
   cursor: default;
 }
-
+.experience-title-span{
+  
+}
 /* Projects section */
 
 #projects {
