@@ -327,8 +327,7 @@ article {
 article .icon {
   cursor: default;
 }
-.experience-title-span{
-  
+.experience-title-span {
 }
 /* Projects section */
 
@@ -340,7 +339,6 @@ article .icon {
   background: rgb(250, 250, 250);
 }
 .project-img {
-  border-radius: 2rem;
   width: 60%;
   height: 50%;
 }
