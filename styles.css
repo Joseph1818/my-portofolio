@@ -20,6 +20,7 @@ body {
   font-family: "Poppins", sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
+  overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
@@ -82,7 +83,7 @@ nav {
 .nav-links {
   gap: 2rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 
 a {
@@ -101,7 +102,7 @@ a:hover {
 }
 .logo {
   font-family: "JetBrains Mono", monospace;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
 }
 .logo:hover {
   cursor: default;
@@ -144,7 +145,7 @@ a:hover {
   display: block;
   padding: 10px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--color-text);
   text-decoration: none;
   transition: all 0.3 ease-in-out;
@@ -238,6 +239,7 @@ section {
 }
 #stacks-pictures {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   margin-top: 1rem;
   gap: 1rem;
@@ -410,6 +412,137 @@ article .icon {
   cursor: default;
   flex-shrink: 0;
 }
+/* Work History section */
+
+#work-history {
+  position: relative;
+  height: auto;
+  min-height: 0;
+  padding-bottom: 4rem;
+}
+
+.timeline-container {
+  max-width: 50rem;
+  margin: 2rem auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0.4rem;
+  top: 0;
+  bottom: -2.5rem;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-item:last-child::before {
+  display: none;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0.35rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+  box-shadow: 0 0 0 4px var(--color-bg);
+}
+
+.timeline-content {
+  background: var(--color-bg-elevated);
+  border: var(--color-border) 0.1rem solid;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  text-align: left;
+}
+
+.timeline-role {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--color-accent);
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-company {
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.timeline-company-meta,
+.timeline-dates {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+}
+
+.timeline-company-meta:last-of-type {
+  margin-bottom: 0.5rem;
+}
+
+.timeline-bullets {
+  list-style: disc;
+  padding-left: 1.75rem;
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.timeline-bullets li {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.timeline-subroles {
+  position: relative;
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.timeline-subroles::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.35rem;
+  bottom: 0.35rem;
+  width: 2px;
+  background: var(--color-border);
+}
+
+.timeline-subrole {
+  position: relative;
+}
+
+.timeline-subrole::after {
+  content: "";
+  position: absolute;
+  left: -1.35rem;
+  top: 0.35rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-accent-soft);
+  box-shadow: 0 0 0 3px var(--color-bg-elevated);
+}
 /* Projects section */
 
 #projects {
@@ -458,11 +591,13 @@ article .icon {
 
 /* Contact */
 
-#contact {
+#Contacts {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  height: auto;
+  min-height: calc(100vh - 20vh);
+  padding-bottom: 2rem;
 }
 
 .contact-info-upper-container {
@@ -491,9 +626,45 @@ article .icon {
 
 /* Footer section */
 footer {
-  height: 26vh;
+  height: 20vh;
   margin: 0 1rem;
 }
 footer p {
   text-align: center;
+}
+
+/* Back to top button */
+#back-to-top {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: var(--color-bg);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(0.6rem);
+  transition: opacity 300ms ease, transform 300ms ease, background 300ms ease;
+  z-index: 999;
+}
+#back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+#back-to-top:hover {
+  background: var(--color-accent-soft);
+}
+@media (prefers-reduced-motion: reduce) {
+  #back-to-top {
+    transition: none;
+  }
 }

@@ -6,9 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portofolio</title>
     <meta name="description" content="Joseph Umba - Software Engineer portfolio showcasing full-stack projects, experience, and skills.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://josephumba-dev.netlify.app/">
+    <meta property="og:title" content="Joseph Umba - Software Engineer">
+    <meta property="og:description" content="Software Engineer with 3+ years building enterprise applications with C#, .NET, React, and Azure.">
+    <meta property="og:image" content="https://josephumba-dev.netlify.app/pocket/PPP5-1.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Joseph Umba - Software Engineer">
+    <meta name="twitter:description" content="Software Engineer with 3+ years building enterprise applications with C#, .NET, React, and Azure.">
+    <meta name="twitter:image" content="https://josephumba-dev.netlify.app/pocket/PPP5-1.jpg">
+
     <link rel="icon" href="./pocket/PPP5-1.jpg">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+    <link rel="stylesheet" href="styles.css?v=7">
+    <link rel="stylesheet" href="mediaqueries.css?v=2">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -19,6 +31,7 @@
         <ul class="nav-links">
             <li><a href="#about" aria-label="about-me">About</a></li>
             <li><a href="#experience" aria-label="my Experiences">Experiences</a></li>
+            <li><a href="#work-history" aria-label="my work history">Work History</a></li>
             <li><a href="#projects" aria-label="my projects">Projects</a></li>
             <li><a href="#Contacts" aria-label="Contacts-me">Contacts</a></li>
         </ul>
@@ -35,6 +48,7 @@
             <div class="menu-links">
                 <li><a href="#about" onclick="toggleMenu()" aria-label="about-me">About</a></li>
                 <li><a href="#experience" onclick="toggleMenu()" aria-label="my Experiences">Experiences</a></li>
+                <li><a href="#work-history" onclick="toggleMenu()" aria-label="my work history">Work History</a></li>
                 <li><a href="#Projects" onclick="toggleMenu()" aria-label="my projects">Projects</a></li>
                 <li><a href="#Contacts" onclick="toggleMenu()" aria-label="Contacts-me">Contacts</a></li>
             </div>
@@ -64,7 +78,6 @@
             </div>
             <div id="stacks-pictures">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#" class="icon no-click" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET Core" class="icon no-click" />
                 <img src="./pocket/Javascript.png" alt="JavaScript" class="icon no-click" />
                 <img src="./pocket/react.png" alt="React" class="icon no-click" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="icon no-click" />
@@ -219,6 +232,67 @@
                 </div>
             </div>
         </div>
+        <img src="./pocket/arrow.png" alt="arrow icon" onclick="location.href='./#work-history'" class="icon arrow">
+    </section>
+    <section id="work-history" class="reveal">
+        <p class="section__text__p1">Explore My</p>
+        <h1 class="title">Work History</h1>
+        <div class="timeline-container">
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <p class="timeline-company">Pilot Software Holdings (Pty) Ltd &middot; Point of Sale</p>
+                    <p class="timeline-company-meta">Full-time &middot; 1 yr 6 mos</p>
+                    <p class="timeline-company-meta">Cape Town, South Africa &middot; Remote</p>
+                    <div class="timeline-subroles">
+                        <div class="timeline-subrole">
+                            <h4 class="timeline-role">Software Developer</h4>
+                            <p class="timeline-dates">Aug 2025 &ndash; Present &middot; 1 yr 1 mo</p>
+                            <ul class="timeline-bullets">
+                                <li>Collaborate with team leads and product manager to translate user requirements into technical specifications.</li>
+                                <li>Develop and maintain full-stack applications (React.js, Razor, C#, .NET MVC, SQL Server) and RESTful APIs.</li>
+                                <li>Optimize SQL queries and participate in code reviews to maintain code quality.</li>
+                            </ul>
+                        </div>
+                        <div class="timeline-subrole">
+                            <h4 class="timeline-role">Software Developer Intern</h4>
+                            <p class="timeline-dates">Mar 2025 &ndash; Aug 2025 &middot; 6 mos</p>
+                            <ul class="timeline-bullets">
+                                <li>Built and maintained a Xero integration for syncing Pilot system data with the Xero accounting platform using .NET and Blazor.</li>
+                                <li>Assisted in maintaining applications using C# and .NET MVC.</li>
+                                <li>Gained hands-on experience working with SQL Server databases and SSMS for database management and querying.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h4 class="timeline-role">Junior Software Engineer</h4>
+                    <p class="timeline-company">Dynamic Web Services &middot; Plum systems</p>
+                    <p class="timeline-dates">Mar 2023 &ndash; Feb 2025 &middot; 24 mos &middot; Hybrid</p>
+                    <ul class="timeline-bullets">
+                        <li>Produced software requirement specifications and translated business requirements into technical solutions.</li>
+                        <li>Designed and implemented web application UIs in React, and deployed to web hosting services.</li>
+                        <li>Designed and integrated relational SQL databases, and built automated Selenium test scripts integrated into a Jenkins CI pipeline.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                    <h4 class="timeline-role">Junior Java Developer</h4>
+                    <p class="timeline-company">SIM Office</p>
+                    <p class="timeline-dates">May 2022 &ndash; Oct 2022 &middot; 6 mos &middot; Hybrid</p>
+                    <ul class="timeline-bullets">
+                        <li>Defined requirement specification documents and performed data modeling for applications.</li>
+                        <li>Designed application frontend interfaces, and performed API testing using Postman.</li>
+                        <li>Automated mobile app testing in Java across multiple devices, tracking defects in JIRA.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         <img src="./pocket/arrow.png" alt="arrow icon" onclick="location.href='./#projects'" class="icon arrow">
     </section>
     <section id="projects" class="reveal">
@@ -309,13 +383,18 @@
                 <ul class="nav-links">
                     <li><a href="#about" aria-label="about-me">About</a></li>
                     <li><a href="#experience" aria-label="my Experiences">Experiences</a></li>
+                    <li><a href="#work-history" aria-label="my work history">Work History</a></li>
                     <li><a href="#projects" aria-label="my projects">Projects</a></li>
                     <li><a href="#Contacts" aria-label="Contacts-me">Contacts</a></li>
                 </ul>
             </div>
         </nav>
-        <p>Copyright &#169; 2024 Umba J. All Rights Reserved.</p>
+        <p>Copyright &#169; <span id="current-year"></span> Umba J. All Rights Reserved.</p>
     </footer>
+
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
     <script src="script.js"></script>
 
