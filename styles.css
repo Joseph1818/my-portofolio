@@ -266,7 +266,8 @@ i.icon.contact-icon {
 img[src*="checkmark.png"],
 img[src*="arrow.png"],
 img[src*="experience.png"],
-img[src*="education.png"] {
+img[src*="education.png"],
+img[src*="simple-icons"] {
   filter: invert(1);
 }
 /* Buttons */
