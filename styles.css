@@ -565,8 +565,14 @@ article .icon {
 }
 .project-title {
   margin: 1rem;
+  margin-bottom: 0.25rem;
   color: var(--color-text);
   font-family: "JetBrains Mono", monospace;
+}
+.project-year {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-bottom: 0.75rem;
 }
 .tech-badges {
   display: flex;
@@ -588,6 +594,16 @@ article .icon {
 .project-btn {
   color: var(--color-text);
   border-color: var(--color-border);
+}
+
+.project-status-badge {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-accent-soft);
+  border: var(--color-accent-soft) 0.1rem solid;
+  border-radius: 2rem;
+  padding: 0.6rem 1.25rem;
 }
 
 /* Contact */
