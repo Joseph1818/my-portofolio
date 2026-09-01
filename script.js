@@ -113,3 +113,27 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+function formatDurationSince(startYear, startMonth) {
+  const now = new Date();
+  const totalMonths =
+    (now.getFullYear() - startYear) * 12 + (now.getMonth() + 1 - startMonth) + 1;
+  const years = Math.floor(totalMonths / 12);
+  const months = totalMonths % 12;
+
+  const parts = [];
+  if (years > 0) {
+    parts.push(years === 1 ? "1 yr" : `${years} yrs`);
+  }
+  if (months > 0 || years === 0) {
+    parts.push(months === 1 ? "1 mo" : `${months} mos`);
+  }
+  return parts.join(" ");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll("[data-start]").forEach((el) => {
+    const [year, month] = el.dataset.start.split("-").map(Number);
+    el.textContent = formatDurationSince(year, month);
+  });
+});
