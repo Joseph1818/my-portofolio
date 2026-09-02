@@ -4,6 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            try {
+                var savedTheme = localStorage.getItem("theme") || "dark";
+                document.documentElement.setAttribute("data-theme", savedTheme);
+            } catch (e) {}
+        })();
+    </script>
     <title>Joseph-portfol</title>
     <meta name="description" content="Joseph Umba - Software Engineer portfolio showcasing full-stack projects, experience, and skills.">
 
@@ -19,7 +27,7 @@
     <meta name="twitter:image" content="https://josephumba-dev.netlify.app/pocket/PPP5-1.jpg">
 
     <link rel="icon" href="./pocket/PPP5-1.jpg">
-    <link rel="stylesheet" href="styles.css?v=10">
+    <link rel="stylesheet" href="styles.css?v=11">
     <link rel="stylesheet" href="mediaqueries.css?v=3">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
@@ -35,10 +43,16 @@
             <li><a href="#projects" aria-label="my projects">Projects</a></li>
             <li><a href="#Contacts" aria-label="Contacts-me">Contacts</a></li>
         </ul>
+        <button id="theme-toggle-desktop" class="theme-toggle" aria-label="Toggle light and dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
     </nav>
 
     <nav id="hamburger-nav">
         <div class="logo">Umba joseph</div>
+        <button id="theme-toggle-mobile" class="theme-toggle" aria-label="Toggle light and dark mode">
+            <i class="fa-solid fa-moon"></i>
+        </button>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
