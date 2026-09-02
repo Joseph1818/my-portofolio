@@ -6,6 +6,35 @@ function toggleMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+  const toggleButtons = document.querySelectorAll(".theme-toggle");
+  if (!toggleButtons.length) return;
+
+  function updateIcons() {
+    const isLight = document.documentElement.getAttribute("data-theme") === "light";
+    toggleButtons.forEach((btn) => {
+      const icon = btn.querySelector("i");
+      if (icon) {
+        icon.className = isLight ? "fa-solid fa-sun" : "fa-solid fa-moon";
+      }
+    });
+  }
+
+  updateIcons();
+
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      const newTheme = isLight ? "dark" : "light";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      try {
+        localStorage.setItem("theme", newTheme);
+      } catch (e) {}
+      updateIcons();
+    });
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
   const yearEl = document.getElementById("current-year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();

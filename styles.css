@@ -12,6 +12,24 @@
   --color-border: rgba(59, 130, 246, 0.35);
 }
 
+html[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-bg-elevated: #f3f4f6;
+  --color-text: #111111;
+  --color-text-muted: #4b5563;
+  --color-accent: #2563eb;
+  --color-accent-soft: #3b82f6;
+  --color-border: rgba(37, 99, 235, 0.3);
+}
+
+html[data-theme="light"] img[src*="checkmark.png"],
+html[data-theme="light"] img[src*="arrow.png"],
+html[data-theme="light"] img[src*="experience.png"],
+html[data-theme="light"] img[src*="education.png"],
+html[data-theme="light"] img[src*="simple-icons"] {
+  filter: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -21,6 +39,28 @@ body {
   background: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;
+  transition: background-color 300ms ease, color 300ms ease;
+}
+.details-container,
+.timeline-content,
+.color-container,
+.menu-links,
+.btn-color-2,
+.tech-badge,
+.project-status-badge {
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .details-container,
+  .timeline-content,
+  .color-container,
+  .menu-links,
+  .btn-color-2,
+  .tech-badge,
+  .project-status-badge {
+    transition: none;
+  }
 }
 html {
   scroll-behavior: smooth;
@@ -84,6 +124,25 @@ nav {
   gap: 2rem;
   list-style: none;
   font-size: 1rem;
+}
+
+.theme-toggle {
+  background: var(--color-bg-elevated);
+  border: var(--color-border) 0.1rem solid;
+  color: var(--color-text);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 300ms ease, color 300ms ease, border-color 300ms ease;
+}
+.theme-toggle:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 a {
